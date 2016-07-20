@@ -1,0 +1,64 @@
+\documentclass[
+    foldmarks=true,      % print foldmarks
+    foldmarks=BTm,       % show foldmarks top, middle, bottom
+    fromalign=right,     % letter head on the right
+    fromphone,           % show phone number
+    fromemail,           % show email
+    fromlogo,            % show logo in letter head
+    version=last         % latest version of KOMA letter
+]{scrlttr2}
+
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\usepackage{parskip}
+
+\usepackage{graphics}
+
+\makeatletter
+    \setlength{\@tempskipa}{-1.2cm}%
+    \@addtoplength{toaddrheight}{\@tempskipa}
+\makeatother
+
+\setlength{\oddsidemargin}{\useplength{toaddrhpos}}
+\addtolength{\oddsidemargin}{-1in}
+\setlength{\textwidth}{\useplength{firstheadwidth}}
+
+\begin{document}
+    \setkomavar{fromname}{$author$}
+    \renewcommand*{\raggedsignature}{\raggedright}
+    \setkomavar{fromaddress}{
+        $for(return-address)$
+            $return-address$$sep$\\
+        $endfor$
+    }
+    \setkomavar{fromphone}{$phone$}
+    \setkomavar{fromemail}{$email$}
+    \setkomavar{signature}{$author$}
+
+    \setkomavar{date}{$date$}
+    \setkomavar{place}{$place$}
+
+    \setkomavar{subject}{$subject$}
+
+    \begin{letter}{%
+        $for(address)$
+            $address$$sep$\\
+        $endfor$
+    }
+
+        \opening{$opening$}
+
+        $body$
+
+        \closing{$closing$}
+
+        \ps $postskriptum$
+
+        $if(encludes)$
+            \setkomavar*{enclseparator}{Anlage}
+            \encl{$encludes$}
+        $endif$
+    \end{letter}
+\end{document}
