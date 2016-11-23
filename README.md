@@ -55,7 +55,7 @@ into Pandocs template directory:
 
 ```
 mkdir ~/.pandoc
-mv your-repo-path/letter.latex ~/.pandoc
+mv your-repo-path/letter.latex ~/.pandoc/templates
 ```
 
 After creating a letter written in Markdown you can compile it into PDF with the
