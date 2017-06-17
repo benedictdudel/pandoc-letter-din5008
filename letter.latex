@@ -16,6 +16,8 @@
 
 \usepackage{graphics}
 
+\usepackage{longtable}
+
 \makeatletter
     \setlength{\@tempskipa}{-1.2cm}%
     \@addtoplength{toaddrheight}{\@tempskipa}
