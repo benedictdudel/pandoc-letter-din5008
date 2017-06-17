@@ -17,6 +17,7 @@
 \usepackage{graphics}
 
 \usepackage{longtable}
+\usepackage{booktabs}
 
 \makeatletter
     \setlength{\@tempskipa}{-1.2cm}%
