@@ -16,8 +16,10 @@
 
 \usepackage{graphics}
 
-\usepackage{longtable}
 \usepackage{booktabs}
+\usepackage{longtable}
+
+\usepackage[right]{eurosym}
 
 \makeatletter
     \setlength{\@tempskipa}{-1.2cm}%
