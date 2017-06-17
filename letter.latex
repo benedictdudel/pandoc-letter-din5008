@@ -16,6 +16,11 @@
 
 \usepackage{graphics}
 
+\usepackage{booktabs}
+\usepackage{longtable}
+
+\usepackage[right]{eurosym}
+
 \makeatletter
     \setlength{\@tempskipa}{-1.2cm}%
     \@addtoplength{toaddrheight}{\@tempskipa}
