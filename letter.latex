@@ -5,7 +5,10 @@
     fromphone,           % show phone number
     fromemail,           % show email
     fromlogo,            % show logo in letter head
-    version=last         % latest version of KOMA letter
+    version=last,        % latest version of KOMA letter
+$for(letteroption)$
+    $letteroption$$sep$,
+$endfor$
 ]{scrlttr2}
 
 \usepackage[ngerman]{babel}
@@ -42,10 +45,10 @@
     \setkomavar{fromemail}{$email$}
     \setkomavar{signature}{$author$}
 
-    \setkomavar{date}{$date$}
+    \setkomavar{date}{$if(date)$$date$$else$\today$endif$}
     \setkomavar{place}{$place$}
 
-    \setkomavar{subject}{$subject$}
+    $if(subject)$\setkomavar{subject}{$subject$}$endif$
 
     \begin{letter}{%
         $for(address)$
@@ -59,7 +62,7 @@
 
         \closing{$closing$}
 
-        \ps $postskriptum$
+	$if(postskriptum)$\ps $postskriptum$$endif$
 
         $if(encludes)$
             \setkomavar*{enclseparator}{Anlage}
