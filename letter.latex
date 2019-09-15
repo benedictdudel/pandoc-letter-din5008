@@ -2,9 +2,9 @@
     foldmarks=true,      % print foldmarks
     foldmarks=BTm,       % show foldmarks top, middle, bottom
     fromalign=right,     % letter head on the right
-    fromphone,           % show phone number
-    fromemail,           % show email
-    fromlogo,            % show logo in letter head
+    $if(phone)$fromphone,$endif$     % show phone number
+    $if(fromemail)$fromemail,$endif$ % show email
+    $if(fromlogo)$fromlogo,$endif$   % show logo in letter head
     version=last,        % latest version of KOMA letter
 $for(letteroption)$
     $letteroption$$sep$,
@@ -53,8 +53,7 @@ $endfor$
     \begin{letter}{%
         $for(address)$
             $address$$sep$\\
-        $endfor$
-    }
+        $endfor$}
 
         \opening{$opening$}
 
