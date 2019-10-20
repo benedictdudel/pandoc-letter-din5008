@@ -30,6 +30,10 @@ address:
 opening: Sehr geehrte Damen und Herren,
 closing: Mit freundlichen Grüßen
 encludes: Muster, Muster, Muster
+ps: |
+   \textbf{Postskriptum \today}
+
+   Noch ein Gedanke zum Schluss.
 ...
 ```
 
@@ -71,6 +75,7 @@ The following yaml variables are supported:
 - `opening`
 - `closing`
 - `encludes`
+- `ps`
 - `author`
 - `phone`
 - `email`
