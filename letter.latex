@@ -59,7 +59,7 @@
 
         \closing{$closing$}
 
-        \ps $postskriptum$
+        \ps $ps$
 
         $if(encludes)$
             \setkomavar*{enclseparator}{Anlage}
