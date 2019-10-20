@@ -5,14 +5,13 @@
     fromphone,           % show phone number
     fromemail,           % show email
     fromlogo,            % show logo in letter head
+    parskip=half,        % no parindent, but parskip
     version=last         % latest version of KOMA letter
 ]{scrlttr2}
 
 \usepackage[ngerman]{babel}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-
-\usepackage{parskip}
 
 \usepackage{graphics}
 
