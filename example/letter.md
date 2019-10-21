@@ -15,7 +15,7 @@ address:
  - 12345 Musterstadt
 opening: Sehr geehrte Damen und Herren,
 closing: Mit freundlichen Grüßen
-encludes: Muster, Muster, Muster
+enclosed: Muster, Muster, Muster
 ...
 Far far away, behind the word mountains, far from the countries
 Vokalia and Consonantia, there live the blind texts. Separated

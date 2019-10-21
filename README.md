@@ -29,7 +29,7 @@ address:
  - 12345 Musterstadt
 opening: Sehr geehrte Damen und Herren,
 closing: Mit freundlichen Grüßen
-encludes: Muster, Muster, Muster
+enclosed: Muster, Muster, Muster
 ...
 ```
 
@@ -70,7 +70,7 @@ The following yaml variables are supported:
 
 - `opening`
 - `closing`
-- `encludes`
+- `enclosed`
 - `author`
 - `phone`
 - `email`
