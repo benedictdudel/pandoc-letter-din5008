@@ -19,9 +19,7 @@ email: max.mustermann@beispiel.de
 date: 01.08.2016
 place: Musterstadt
 subject: Titel vom Brief
-return-address:
- - Musterstraße
- - 12345 Berlin
+return-address: [Musterstraße, 12345 Berlin]
 address:
  - Musterfirma GmbH
  - Max Mustermann
@@ -29,15 +27,19 @@ address:
  - 12345 Musterstadt
 opening: Sehr geehrte Damen und Herren,
 closing: Mit freundlichen Grüßen
-encludes: Muster, Muster, Muster
-...
+enclosed: Muster, Muster, Muster
+ps: |
+   \textbf{Postskriptum \today}
+
+   Noch ein Gedanke zum Schluss.
+---
 ```
 
 The compiled result will then look like this:
 
-![alt Letter](https://github.com/benedu/pandoc-letter/raw/master/example/letter.png)
+![alt Letter](/example/letter.png)
 
-You can also download the compiled PDF [here](https://github.com/benedu/pandoc-letter/raw/master/example/letter.pdf).
+You can also download the compiled PDF [here](/example/letter.pdf).
 
 
 ## Requirements
@@ -54,7 +56,7 @@ Before you can make use of the template you need to move the LaTeX template file
 into Pandocs template directory:
 
 ```
-mkdir ~/.pandoc
+mkdir -p ~/.pandoc/templates
 mv your-repo-path/letter.latex ~/.pandoc/templates
 ```
 
@@ -70,7 +72,8 @@ The following yaml variables are supported:
 
 - `opening`
 - `closing`
-- `encludes`
+- `enclosed`
+- `ps`
 - `author`
 - `phone`
 - `email`
@@ -78,3 +81,6 @@ The following yaml variables are supported:
 - `subject`
 - `return-address`
 - `address`
+
+If you want to add some options to the `scrlttr2` document class, you can list
+them via the `letteroption` yaml variable like in the example above.

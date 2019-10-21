@@ -5,9 +5,7 @@ email: max.mustermann@beispiel.de
 date: 01.08.2016
 place: Musterstadt
 subject: Titel vom Brief
-return-address:
- - Musterstraße
- - 12345 Berlin
+return-address: [Musterstraße, 12345 Berlin]
 address:
  - Musterfirma GmbH
  - Max Mustermann
@@ -15,8 +13,12 @@ address:
  - 12345 Musterstadt
 opening: Sehr geehrte Damen und Herren,
 closing: Mit freundlichen Grüßen
-encludes: Muster, Muster, Muster
-...
+enclosed: Muster, Muster, Muster
+ps: |
+   \textbf{Postskriptum \today}
+
+   Noch ein Gedanke zum Schluss.
+---
 Far far away, behind the word mountains, far from the countries
 Vokalia and Consonantia, there live the blind texts. Separated
 they live in Bookmarksgrove right at the coast of the Semantics,
