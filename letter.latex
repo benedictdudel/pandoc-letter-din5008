@@ -45,7 +45,7 @@ $endfor$
     \setkomavar{fromemail}{$email$}
     \setkomavar{signature}{$author$}
 
-    \setkomavar{date}{$if(date)$$date$$else$\today$endif$}
+    $if(date)$\setkomavar{date}{$date$}$endif$
     \setkomavar{place}{$place$}
 
     $if(subject)$\setkomavar{subject}{$subject$}$endif$
