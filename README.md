@@ -11,7 +11,7 @@ the German DIN 5008 norm for letters.
 
 A simple letter in Markdown looks like the following:
 
-```markdown
+```yaml
 ---
 author: Max Mustermann
 phone: +49 1234 56789
@@ -55,15 +55,15 @@ In order to use the template you must have installed the following components:
 Before you can make use of the template you need to move the LaTeX template file
 into Pandocs template directory:
 
-```
+```bash
 mkdir -p ~/.pandoc/templates
-mv your-repo-path/letter.latex ~/.pandoc/templates
+ln -s your-repo-path/letter.latex ~/.pandoc/templates
 ```
 
 After creating a letter written in Markdown you can compile it into PDF with the
 following line:
 
-`pandoc letter.md -s -o letter.pdf --template="letter"`
+`pandoc letter.md -s -o letter.pdf --template=letter`
 
 
 ## Configuration
@@ -83,4 +83,4 @@ The following yaml variables are supported:
 - `address`
 
 If you want to add some options to the `scrlttr2` document class, you can list
-them via the `letteroption` yaml variable like in the example above.
+them via the `letteroption` yaml variable.
