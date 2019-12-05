@@ -32,6 +32,9 @@ $endfor$
 \addtolength{\oddsidemargin}{-1in}
 \setlength{\textwidth}{\useplength{firstheadwidth}}
 
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
 \begin{document}
     \setkomavar{fromname}{$author$}
     \renewcommand*{\raggedsignature}{\raggedright}
