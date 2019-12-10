@@ -25,7 +25,8 @@ they live in Bookmarksgrove right at the coast of the Semantics,
 a large language ocean. A small river named Duden flows by their
 place and supplies it with the necessary regelialia. 
 
-When she reached the first hills of the Italic Mountains, she
-had a last view back on the skyline of her hometown Bookmarksgrove,
-the headline of Alphabet Village and the subline of her own road,
-the Line Lane.
+Bitte bringen Sie zu Ihrem Termin folgendes mit:
+
+* Handtuch
+* Butterbrote
+* 1 Flasche Wasser
