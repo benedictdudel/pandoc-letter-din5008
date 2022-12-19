@@ -66,7 +66,7 @@ $endfor$
 
         \closing{$closing$}
 
-        $if(postskriptum)$\ps $postskriptum$$endif$
+        $if(ps)$\ps $ps$$endif$
 
         $if(encludes)$
             \setkomavar*{enclseparator}{Anlage}
