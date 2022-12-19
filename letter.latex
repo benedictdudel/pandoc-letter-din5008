@@ -2,17 +2,20 @@
     foldmarks=true,      % print foldmarks
     foldmarks=BTm,       % show foldmarks top, middle, bottom
     fromalign=right,     % letter head on the right
-    fromphone,           % show phone number
-    fromemail,           % show email
-    fromlogo,            % show logo in letter head
-    version=last         % latest version of KOMA letter
+$if(phone)$    fromphone,$endif$           % show phone number
+$if(email)$    fromemail,$endif$           % show email
+$if(fromlogo)$    fromlogo,$endif$            % show logo in letter head
+    version=last,        % latest version of KOMA letter
+$for(letteroption)$
+    $letteroption$$sep$,
+$endfor$
 ]{scrlttr2}
 
 \usepackage[ngerman]{babel}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 
-\usepackage{parskip}
+\usepackage{csquotes} % German quotation marks
 
 \usepackage{graphics}
 
@@ -20,6 +23,9 @@
 \usepackage{longtable}
 
 \usepackage[right]{eurosym}
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 
 \makeatletter
     \setlength{\@tempskipa}{-1.2cm}%
@@ -42,16 +48,15 @@
     \setkomavar{fromemail}{$email$}
     \setkomavar{signature}{$author$}
 
-    \setkomavar{date}{$date$}
+    $if(date)$\setkomavar{date}{$date$}$endif$
     \setkomavar{place}{$place$}
 
-    \setkomavar{subject}{$subject$}
+    $if(subject)$\setkomavar{subject}{$subject$}$endif$
 
     \begin{letter}{%
         $for(address)$
             $address$$sep$\\
-        $endfor$
-    }
+        $endfor$}
 
         \opening{$opening$}
 
@@ -59,7 +64,7 @@
 
         \closing{$closing$}
 
-        \ps $postskriptum$
+        $if(ps)$\ps $ps$$endif$
 
         $if(enclosed)$
             \setkomavar*{enclseparator}{Anlage}
