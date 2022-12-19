@@ -2,10 +2,13 @@
     foldmarks=true,      % print foldmarks
     foldmarks=BTm,       % show foldmarks top, middle, bottom
     fromalign=right,     % letter head on the right
-    fromphone,           % show phone number
-    fromemail,           % show email
-    fromlogo,            % show logo in letter head
-    version=last         % latest version of KOMA letter
+$if(phone)$    fromphone,$endif$           % show phone number
+$if(email)$    fromemail,$endif$           % show email
+$if(fromlogo)$    fromlogo,$endif$            % show logo in letter head
+    version=last,        % latest version of KOMA letter
+$for(letteroption)$
+    $letteroption$$sep$,
+$endfor$
 ]{scrlttr2}
 
 \usepackage[ngerman]{babel}
@@ -47,16 +50,15 @@
     \setkomavar{fromemail}{$email$}
     \setkomavar{signature}{$author$}
 
-    \setkomavar{date}{$date$}
+    $if(date)$\setkomavar{date}{$date$}$endif$
     \setkomavar{place}{$place$}
 
-    \setkomavar{subject}{$subject$}
+    $if(subject)$\setkomavar{subject}{$subject$}$endif$
 
     \begin{letter}{%
         $for(address)$
             $address$$sep$\\
-        $endfor$
-    }
+        $endfor$}
 
         \opening{$opening$}
 
@@ -64,7 +66,7 @@
 
         \closing{$closing$}
 
-        \ps $postskriptum$
+        $if(postskriptum)$\ps $postskriptum$$endif$
 
         $if(encludes)$
             \setkomavar*{enclseparator}{Anlage}

@@ -78,3 +78,6 @@ The following yaml variables are supported:
 - `subject`
 - `return-address`
 - `address`
+
+If you want to add some options to the `scrlttr2` document class, you can list
+them via the `letteroption` yaml variable.
