@@ -30,6 +30,10 @@ address:
 opening: Sehr geehrte Damen und Herren,
 closing: Mit freundlichen Grüßen
 encludes: Muster, Muster, Muster
+ps: |
+   \textbf{Postskriptum \today}
+
+   Noch ein Gedanke zum Schluss.
 ...
 ```
 
@@ -54,8 +58,8 @@ Before you can make use of the template you need to move the LaTeX template file
 into Pandocs template directory:
 
 ```
-mkdir ~/.pandoc
-mv your-repo-path/letter.latex ~/.pandoc/templates
+mkdir -p ~/.pandoc/templates
+mv your-repo-path/letter.latex ~/.pandoc/templates/
 ```
 
 After creating a letter written in Markdown you can compile it into PDF with the
@@ -71,6 +75,7 @@ The following yaml variables are supported:
 - `opening`
 - `closing`
 - `encludes`
+- `ps`
 - `author`
 - `phone`
 - `email`
@@ -78,3 +83,6 @@ The following yaml variables are supported:
 - `subject`
 - `return-address`
 - `address`
+
+If you want to add some options to the `scrlttr2` document class, you can list
+them via the `letteroption` yaml variable.

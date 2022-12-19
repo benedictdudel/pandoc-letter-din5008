@@ -16,6 +16,10 @@ address:
 opening: Sehr geehrte Damen und Herren,
 closing: Mit freundlichen Grüßen
 encludes: Muster, Muster, Muster
+ps: |
+   \textbf{Postskriptum \today}
+
+   Noch ein Gedanke zum Schluss.
 ...
 Far far away, behind the word mountains, far from the countries
 Vokalia and Consonantia, there live the blind texts. Separated
