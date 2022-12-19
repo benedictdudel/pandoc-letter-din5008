@@ -1,4 +1,10 @@
 ---
+letteroption:
+  - parskip=half
+  - foldmarks=true
+  - foldmarks=BTm
+  - fromalign=right
+  - version=last
 author: Max Mustermann
 phone: +49 1234 56789
 email: max.mustermann@beispiel.de

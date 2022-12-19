@@ -1,11 +1,6 @@
 \documentclass[
-    foldmarks=true,      % print foldmarks
-    foldmarks=BTm,       % show foldmarks top, middle, bottom
-    fromalign=right,     % letter head on the right
-$if(phone)$    fromphone,$endif$           % show phone number
-$if(email)$    fromemail,$endif$           % show email
-$if(fromlogo)$    fromlogo,$endif$            % show logo in letter head
-    version=last,        % latest version of KOMA letter
+    $if(phone)$    fromphone,$endif$
+    $if(email)$    fromemail,$endif$
 $for(letteroption)$
     $letteroption$$sep$,
 $endfor$
