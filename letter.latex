@@ -62,7 +62,7 @@ $endfor$
         $if(ps)$\ps $ps$$endif$
 
         $if(enclosed)$
-            \setkomavar*{enclseparator}{Anlage}
+            \setkomavar*{enclseparator}{Anlage(n)}
             \encl{$enclosed$}
         $endif$
     \end{letter}
