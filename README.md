@@ -1,88 +1,47 @@
 # Pandoc Letter Template (DIN 5008)
 
-## Description
+[Pandoc](https://pandoc.org/) template for writing letters in Markdown and converting them into PDFs
+that follow the German national standard DIN 5008 for letter formatting. By using this
+template, you can more efficiently create professional-looking letters in a
+clean and organized manner. The template is customizable, so you can tailor it
+to your specific needs.
 
-This template allows you to write simple letters in Markdown and convert them
-into nice looking PDFs. The template is based on Koma Script and satisfies
-the German DIN 5008 norm for letters.
-
-
-## Example
-
-A simple letter in Markdown looks like the following:
-
-```markdown
----
-author: Max Mustermann
-phone: +49 1234 56789
-email: max.mustermann@beispiel.de
-date: 01.08.2016
-place: Musterstadt
-subject: Titel vom Brief
-return-address:
- - Musterstraße
- - 12345 Berlin
-address:
- - Musterfirma GmbH
- - Max Mustermann
- - Musterstraße
- - 12345 Musterstadt
-opening: Sehr geehrte Damen und Herren,
-closing: Mit freundlichen Grüßen
-enclosed: Muster, Muster, Muster
-ps: |
-   \textbf{Postskriptum \today}
-
-   Noch ein Gedanke zum Schluss.
-...
-```
-
-The compiled result will then look like this:
+## Preview
 
 ![alt Letter](https://github.com/benedu/pandoc-letter/raw/master/example/letter.png)
 
-You can also download the compiled PDF [here](https://github.com/benedu/pandoc-letter/raw/master/example/letter.pdf).
-
-
 ## Requirements
-
-In order to use the template you must have installed the following components:
 
 - [Pandoc](http://pandoc.org/installing.html)
 - [LaTeX](https://latex-project.org/ftp.html)
-
+  - [csquotes](https://ctan.org/pkg/csquotes)
 
 ## Usage
 
-Before you can make use of the template you need to move the LaTeX template file
-into Pandocs template directory:
+Clone this repository or download the template with the following command:
 
-```
-mkdir -p ~/.pandoc/templates
-mv your-repo-path/letter.latex ~/.pandoc/templates/
+```bash
+curl https://raw.githubusercontent.com/benedictdudel/pandoc-letter-din5008/master/letter.latex --create-dirs -o ~/.pandoc/templates/letter.latex
 ```
 
-After creating a letter written in Markdown you can compile it into PDF with the
-following line:
+Write your letter in markdown, using the provided [`example/letter.md`](https://raw.githubusercontent.com/benedictdudel/pandoc-letter-din5008/master/example/letter.md) file as a
+guide. You can download the example `letter.md` file with the following command:
 
-`pandoc letter.md -s -o letter.pdf --template="letter"`
+```bash
+curl https://raw.githubusercontent.com/benedictdudel/pandoc-letter-din5008/master/example/letter.md -o letter.md
+```
 
+To convert the markdown file to a PDF run:
 
-## Configuration
+```bash
+pandoc letter.md -s -o letter.pdf --template="letter"
+```
 
-The following yaml variables are supported:
+## Customization
 
-- `opening`
-- `closing`
-- `enclosed`
-- `ps`
-- `author`
-- `phone`
-- `email`
-- `place`
-- `subject`
-- `return-address`
-- `address`
+You can customize the look and feel of the generated PDF by modifying the
+variables. See [`example/letter.md`](https://raw.githubusercontent.com/benedictdudel/pandoc-letter-din5008/master/example/letter.md) for a full list of available variables.
 
-If you want to add some options to the `scrlttr2` document class, you can list
-them via the `letteroption` yaml variable.
+## Contact
+
+If you have any questions, feel free to open an issue [here](https://github.com/benedictdudel/pandoc-letter-din5008/issues) or contact me via twitter at [@benedictdudel](https://twitter.com/benedictdudel) 
