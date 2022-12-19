@@ -22,18 +22,17 @@ address:
 opening: Sehr geehrte Damen und Herren,
 closing: Mit freundlichen Grüßen
 enclosed: Muster, Muster, Muster
-ps: |
-   \textbf{Postskriptum \today}
-
-   Noch ein Gedanke zum Schluss.
+ps: "PS: Hier noch ein Gedanke zum Schluss"
 ...
-Far far away, behind the word mountains, far from the countries
-Vokalia and Consonantia, there live the blind texts. Separated
-they live in Bookmarksgrove right at the coast of the Semantics,
-a large language ocean. A small river named Duden flows by their
-place and supplies it with the necessary regelialia. 
 
-When she reached the first hills of the Italic Mountains, she
-had a last view back on the skyline of her hometown Bookmarksgrove,
-the headline of Alphabet Village and the subline of her own road,
-the Line Lane.
+Ich bin ein kleiner Blindtext. Und zwar schon so lange ich denken kann. Es war nicht leicht zu verstehen, was es bedeutet, ein blinder Text zu sein: Man ergibt keinen Sinn. Wirklich keinen Sinn.
+
+- Honig 5 € 
+- Streichhölzer 2 €
+
+Aber andere Texte schaffen das auch nicht. Und darum stört es mich nicht besonders "blind" zu sein. 
+
+|Spalte 1     |Spalte 2|
+|-------------|--------|
+|Honig        |5 €     |
+|Streichhölzer|2 €     |
