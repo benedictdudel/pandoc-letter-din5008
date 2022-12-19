@@ -8,7 +8,9 @@ to your specific needs.
 
 ## Preview
 
-![alt Letter](https://github.com/benedu/pandoc-letter/raw/master/example/letter.png)
+<p align="center">
+    <img src="https://github.com/benedu/pandoc-letter/raw/master/example/letter.png" alt="Letter Preview"/>
+</p>
 
 ## Requirements
 
