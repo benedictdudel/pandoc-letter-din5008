@@ -15,8 +15,6 @@ $endfor$
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 
-\usepackage{parskip}
-
 \usepackage{csquotes} % German quotation marks
 
 \usepackage{graphics}
