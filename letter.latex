@@ -66,9 +66,9 @@ $endfor$
 
         $if(ps)$\ps $ps$$endif$
 
-        $if(encludes)$
+        $if(enclosed)$
             \setkomavar*{enclseparator}{Anlage}
-            \encl{$encludes$}
+            \encl{$enclosed$}
         $endif$
     \end{letter}
 \end{document}

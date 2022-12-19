@@ -15,7 +15,7 @@ address:
  - 12345 Musterstadt
 opening: Sehr geehrte Damen und Herren,
 closing: Mit freundlichen Grüßen
-encludes: Muster, Muster, Muster
+enclosed: Muster, Muster, Muster
 ps: |
    \textbf{Postskriptum \today}
 
