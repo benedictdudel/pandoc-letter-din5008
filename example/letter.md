@@ -23,9 +23,10 @@ opening: Sehr geehrte Damen und Herren,
 closing: Mit freundlichen Grüßen
 enclosed: Muster, Muster, Muster
 ps: "PS: Hier noch ein Gedanke zum Schluss"
+links-as-notes: true
 ...
 
-Ich bin ein kleiner Blindtext. Und zwar schon so lange ich denken kann. Es war nicht leicht zu verstehen, was es bedeutet, ein blinder Text zu sein: Man ergibt keinen Sinn. Wirklich keinen Sinn.
+Ich bin ein kleiner [Blindtext](https://twitter.com/benedictdudel). Und zwar schon so lange ich denken kann. Es war nicht leicht zu verstehen, was es bedeutet, ein blinder Text zu sein: Man ergibt keinen Sinn. Wirklich keinen Sinn.
 
 - Honig 5 € 
 - Streichhölzer 2 €
