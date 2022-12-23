@@ -31,7 +31,7 @@ $endfor$
 \setlength{\textwidth}{\useplength{firstheadwidth}}
 
 % Links
-\usepackage{hyperref}
+\usepackage[hidelinks]{hyperref}
 $if(links-as-notes)$
 % Make links footnotes instead of hotlinks:
 \DeclareRobustCommand{\href}[2]{#2\footnote{\url{#1}}}
