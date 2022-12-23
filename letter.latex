@@ -9,7 +9,6 @@ $endfor$
 \usepackage[ngerman]{babel}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-
 \usepackage{csquotes} % German quotation marks
 
 \usepackage{graphics}
@@ -30,6 +29,14 @@ $endfor$
 \setlength{\oddsidemargin}{\useplength{toaddrhpos}}
 \addtolength{\oddsidemargin}{-1in}
 \setlength{\textwidth}{\useplength{firstheadwidth}}
+
+% Links
+\usepackage{hyperref}
+$if(links-as-notes)$
+% Make links footnotes instead of hotlinks:
+\DeclareRobustCommand{\href}[2]{#2\footnote{\url{#1}}}
+$endif$
+% End of Links
 
 \begin{document}
     \setkomavar{fromname}{$author$}
