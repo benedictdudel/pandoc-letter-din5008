@@ -525,6 +525,45 @@ $if(closing)$\setkomavar{closing}{$closing$}$endif$
 $if(enclseparator)$\setkomavar*{enclseparator}{$enclseparator$}$endif$
 % END OVERRIDES
 
+$if(printinvoicefooter)$
+\setplength{firstfootvpos}{270mm}
+\setkomavar{firstfoot}{\usekomafont{pageheadfoot}\usekomafont{pagefoot}
+\parbox[t]{\textwidth}{
+    \rule[3pt]{\linewidth}{.4pt} \\
+    \begin{tabular}[t]{l@{}}
+        $if(printfooteraddress)$
+          $fromname$\\
+          $for(fromaddress)$
+            $fromaddress$$sep$\\
+          $endfor$
+        $endif$
+        % either taxNumber or USt-ID has to be present
+        $if(taxNumber)$
+          \\Steuernummer: $taxNumber$
+        $endif$
+        $if(ustID)$
+          \\USt-ID: $ustID$
+        $endif$
+    \end{tabular}
+    \hfill
+    \begin{tabular}[t]{l@{}}
+        $if(phone)$Telefon: $phone$\\$endif$
+        $fromemail$\\
+    \end{tabular}
+    \hfill
+    $if(frombank)$
+    \begin{tabular}[t]{l@{}}
+      $for(frombank)$
+        $frombank$$sep$\\
+      $endfor$
+    \end{tabular}
+  $endif$
+}
+}
+$endif$
+
+
+
 \begin{document}
 $if(has-frontmatter)$
 \frontmatter

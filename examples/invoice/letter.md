@@ -15,6 +15,13 @@ date: 01.01.2023
 subject: Musterbrief
 signature: Erika Musterfrau
 invoice: 123456789
+frombank: |
+  Musterbank  
+  IBAN: DE12345678901234567890  
+  BIC: MUBADEF1XXX
+printinvoicefooter: true
+printfooteraddress: true
+ustID: DE123456789
 ...
 
 vielen Dank für Ihren Auftrag. Bitte überweisen Sie den im Folgenden aufgeführten Rechnungsbetrag innerhalb von 14 Tagen auf das angegebene Konto.
